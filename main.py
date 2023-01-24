@@ -1,31 +1,8 @@
-# Напишите функцию main, в которой
-#
-# - введите приглашение
-# - обрабатывайте ввод пользователя
-# - выполните перемещение если это возможно
-# - выполните перемещение
 from entity.courier import Courier
 from entity.request import Request
 from entity.shop import Shop
 from entity.store import Store
 from exceptions import RequestError, CourierError
-
-# store = Store(items={
-#     "печенька": 25,
-#     "собачка": 25,
-#     "елка": 25,
-#     "пончик": 3,
-#     "зонт": 5,
-#     "ноутбук": 1,
-# })
-#
-# shop = Shop(items={
-#     "печенька": 2,
-#     "собачка": 2,
-#     "елка": 2,
-#     "зонт": 1,
-#     "пончик": 1,
-# })
 
 store = Store(items={})
 shop = Shop(items={})
@@ -48,6 +25,7 @@ shop.items = {
 
 store_2 = Store(items={"печенька": 13})
 store_3 = Store(items={"пенал": 34})
+
 
 # storages - хранилища
 # маппинг русского названия

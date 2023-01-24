@@ -1,5 +1,7 @@
 class BaseError(Exception):
     massage = "Неожиданная ошибка"  # или None, ""
+
+
 # не используется, но что бы было от кого наследоваться
 
 
@@ -11,7 +13,7 @@ class RequestError(BaseError):
     massage = "Произошла ошибка обработки запроса"
 
 
-# ошибки доставки
+# --------ошибки доставки-------
 class NotEnoughSpace(CourierError):
     massage = "Недостаточно места на складе"
 
@@ -24,7 +26,7 @@ class TooManyDifferentProducts(CourierError):
     massage = "Слишком много товара в магазине"
 
 
-# ошибки запроса
+# ------------ошибки запроса------------
 class InvalidStorageName(RequestError):
     massage = "Выбран не существующий склад"
 

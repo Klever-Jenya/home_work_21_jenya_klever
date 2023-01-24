@@ -5,11 +5,12 @@ from exceptions import InvalidRequest, InvalidStorageName
 
 
 class Request:
-    # request - строка от пользователя, "хранилища" в виде словаря # storages - хранилища
+    # request - строка от пользователя, "хранилища" в виде словаря
     # storages = {
     #     "магазин": shop,
     #     "склад": store,
-    #     }    нужно для того, чтобы проверить что такой склад существует и сохранить этот склад себе
+    #     }
+    #     нужно для того, чтобы проверить, что такой склад существует и сохранить этот склад себе
     def __init__(self, request: str, storages: Dict[str, AbstractStorage]):
         # TODO: Разделить строку по пробелам (самая простая валидация)
         splitted_request = request.lower().split(" ")
@@ -27,11 +28,3 @@ class Request:
             raise InvalidStorageName
 
 
-
-
-
-        # И возвращает объект класса Request
-        # return from = "склад",
-        #     to =  "магазин",
-        #     amount = 3,
-        #     product = "печеньки"

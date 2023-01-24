@@ -14,7 +14,7 @@ class BaseStorage(AbstractStorage):
     def add(self, title: str, quantity: int) -> None:  # None - ничего не возвращает
         # TODO: Проверить, что места достаточно
         if self.get_free_space() < quantity:
-            raise NotEnoughSpace  # "В магазин недостаточно места, попобуйте что то другое"
+            raise NotEnoughSpace
 
         # TODO: Добавить товар
         if title in self.__items:
@@ -24,8 +24,8 @@ class BaseStorage(AbstractStorage):
 
     def remove(self, title: str, quantity: int) -> None:  # УДАЛИТЬ - уменьшает запас items, но не ниже 0
         # TODO: Проверить, есть ли такой товар
-        if title not in self.__items or self.__items[title] < quantity:  # такого товара нет\ не достаточно
-            raise NotEnoughProduct  # "Не хватает на складе, попробуйте заказать меньше"
+        if title not in self.__items or self.__items[title] < quantity:  # такого товара нет/недостаточно
+            raise NotEnoughProduct
 
         # TODO: Вычесть необходимое кол-во товара. Если товара станет 0 - удалить товар из списка
         self.__items[title] -= quantity

@@ -8,7 +8,7 @@ class Shop(BaseStorage):
         super().__init__(items, capacity)
 
     def add(self, title: str, quantity: int) -> None:
-        # TODO: Проверить, что в магазине храниться меньше 5 уникальных товаров
+        # TODO: Проверить, что в магазине храниться не более 5 уникальных товаров
         if self.get_unique_items_count() > 5:
             raise TooManyDifferentProducts
 
