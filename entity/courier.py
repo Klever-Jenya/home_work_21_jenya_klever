@@ -25,7 +25,7 @@ class Courier:
         self.__to.add(title=self.__request.product, quantity=self.__request.quantity)
         print(f"Курьер доставил {self.__request.quantity} {self.__request.product} в {self.__request.destination}")
 
-    def cancel(self):  # отменить # вернуть товары оттуда, где они были взяты  ???
+    def cancel(self):  # отменить # вернуть товары оттуда, где они были взяты
         # TODO: Добавить(вернуть) товар на склад отправления
         self.__from.add(title=self.__request.product, quantity=self.__request.quantity)
         print(f"Курьер вернул {self.__request.quantity} {self.__request.product} в {self.__request.destination}")

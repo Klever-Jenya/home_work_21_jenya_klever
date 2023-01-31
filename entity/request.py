@@ -5,6 +5,8 @@ from exceptions import InvalidRequest, InvalidStorageName
 
 
 class Request:
+    # Много комментариев - плохо
+
     # request - строка от пользователя, "хранилища" в виде словаря
     # storages = {
     #     "магазин": shop,

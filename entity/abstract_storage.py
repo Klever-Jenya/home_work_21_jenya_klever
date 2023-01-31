@@ -15,9 +15,7 @@ class AbstractStorage(ABC):  # склад
     def get_free_space(self) -> int:  # вернуть количество свободных мест
         pass
 
-    # @abstractmethod
-    # def get_items(self):  # возвращает содержание склада в словаре {товар: количество}
-    #     pass
+    # мёртвый код удалён
 
     @abstractmethod
     def get_unique_items_count(self):  # возвращает количество уникальных товаров.

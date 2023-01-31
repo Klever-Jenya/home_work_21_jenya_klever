@@ -36,8 +36,7 @@ class BaseStorage(AbstractStorage):
         # TODO: Посчитать сумму значений в словаре __items. Вычесть ее из __capacity
         return self.__capacity - sum(self.__items.values())
 
-    # def get_items(self) -> Dict[str, int]:  # возвращает содержание склада в словаре {товар: количество}
-    #     return self.__items
+    # мёртвый код удалён
 
     @property  # геттер
     def items(self):
